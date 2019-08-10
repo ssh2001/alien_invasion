@@ -19,9 +19,6 @@ def run_game():
         ship.update()
         bullets.update()
         gf.update_screen(ai_settings, screen, ship, bullets)
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                sys.exit()
         screen.fill(ai_settings.bg_color)
         ship.blitme()
         pygame.display.flip()
